@@ -1,11 +1,13 @@
 # Rails's Router
 
-:pushpin: When the Rails ```server``` is listening for ```requests``` the Rails ```router``` is able to recognize & ```switch``` on ```url strings``` to choose a ```controller method``` to which the request is ```dispatched``` to for processing. <b>i.e</b> The router receives a ```GET``` ```request``` for ```"/photo/17"``` & realizes that ```PhotosController#show()``` should be called on/for an instance of ```Photo``` with the ```:id``` of a ```number``` 17. <b>N.B</b> <i>the ```router``` ```switches``` on both ```HTTP``` ```method``` & ```path``` name.</i>
+:pushpin: When the Rails ```server``` is listening for ```requests``` the Rails ```router``` is able to recognize & ```switch``` on ```url strings``` to choose a ```controller method``` to which the request is ```dispatched``` to for processing.<br> 
+:pushpin:<b>i.e</b> The router receives a ```GET``` ```request``` for ```"/photo/17"``` & realizes that ```PhotosController#show()``` should be called on/for an instance of ```Photo``` with the ```:id``` of a ```number``` 17. <b>N.B</b> <i>the ```router``` ```switches``` on both ```HTTP``` ```method``` & ```path``` name.</i>
 
-:pushpin: <i>navigate to ```# config/routes.rb``` to begin drawing route resources for your ```Application``` </i>
+**N.B**<i> navigate to ```# config/routes.rb``` to begin drawing ```url``` route ```resources``` for your ```Application``` </i>
 ```ruby
 # config/routes.rb
 Photo::Application.routes.draw do
+  # draw only index & show REST-ful url route resources
   resources :photo, only: [:index, :show] 
 end
 ```
@@ -30,7 +32,7 @@ $ rails routes
 
 ### Rails's Router Helper Methods
 
-:pushpin: <i>If you build URLs by hand in Rails, you're doing it wrong.</i>
+:pushpin: <i>If you build URLs by hand in Rails, you're doing it wrong.</i> <br>
 :pushpin: Always prefer the routing helpers to building your own URLs through string interpolation. The routing helpers are less error prone and tedious.
 
 | Name / Required Arguments | Returns the URL: |   
