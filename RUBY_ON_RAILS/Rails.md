@@ -11,7 +11,6 @@ interacts with data stored inside an sql database via Rails's ```Active record``
 interacts with only the ```controller``` to retrieve data from it & show it to the user. i.e (an html response filled with data from a server)
 
 ### CONTROLLER
-interacts & records data the user types in & clicks on via Rails's ```server```, ```router``` & ```dispatcher```, picks 
-up data from the ```model``` & "controls" what data gets sent back to the user/```view```
+interacts & records data the user types in & clicks on via Rails's ```server```, ```router``` & ```dispatcher```, gives & retrieves data from the ```model``` & "controls" what data gets sent back to the user/```view```
 
 
